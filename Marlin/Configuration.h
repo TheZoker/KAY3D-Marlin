@@ -69,13 +69,13 @@
 //#define Original_creality1 // Choose this if you have an original creality board - Ender 3/ Ender 3 pro/ Ender 5. Sanguino 1284P Boards
 //#define Original_creality2 / Choose this if you have an original creality board - CR-10S, CR-10S5 / Ender 5 Plus. ATmega2560 Boards
 //#define BTTSKRE3MINIV1_0 // Choose this if you are using BigTreeTech SKR Mini E3 V1.0
-//#define BTTSKRE3MINIV1_2 // Choose this if you are using BigTreeTech SKR Mini E3 v1.2 
+#define BTTSKRE3MINIV1_2 // Choose this if you are using BigTreeTech SKR Mini E3 v1.2 
 //#define BTTSKR1_3 // Choose this if you are using BigTreeTech SKR 1.3 
 //#define BTTGTRV1_0 //[BETA] Choose this if you are using BigTreeTech GTR 1.0
 //#define BTTSKR1_4 // [BETA] Choose this if you are using BigTreeTech SKR 1.4
 //#define BTTSKRV1_4TURBO //Choose this if you are using BigTreeTech SKR 1.4 Turbo
 //#define BTTSKRE3DIPV1_0 // Choose this if you are using BigTreeTech SKR E3 DIP v1.0
-#define BTTSKRE3DIPV1_1 // [BETA] Choose this if you are using BigTreeTech SKR E3 DIP v1.1
+//#define BTTSKRE3DIPV1_1 // [BETA] Choose this if you are using BigTreeTech SKR E3 DIP v1.1
 //#define BTTSKRPROV1_1 //Choose this if you are using BigTreeTech SKR PRO v1.1
 //#define BTTSKRNPRO1_1 //Choose this if you are using BigTreeTech SKR Non-PRO v1.1
 //#define MKSGENLV1_0 //[BETA] Choose this if you are using MKS Gen L v1.0 
@@ -189,8 +189,8 @@ Board name: FYSETCV1_1A, FYSETCV1_1B, FYSETCV1_2A, FYSETCV1_2B, change_value = S
 
 /*** *** **** Section 6 - Choose your Extruder type. There should only be one active selection here *** *** ***/
 
-#define Ender_regular // e-steps: 93. Plastic extruder used stock Ender-3/Pro and CR-10 
-//#define Ender_regular_metal // e-steps: 97.3.  Metal extruder used stock Ender-3/Pro and CR-10 
+//#define Ender_regular // e-steps: 93. Plastic extruder used stock Ender-3/Pro and CR-10 
+#define Ender_regular_metal // e-steps: 97.3.  Metal extruder used stock Ender-3/Pro and CR-10 
 //#define Ender_metaldualdrive // e-steps: 140. Usually red in color with TWO toothed gears
 //#define E3D_hemera_extruder // e-steps: 409. If over extruder please change e steps via GCODE M92XXX where XXX = number of correct steps
 //#define BMG_regular // e-steps: 140. BMG non-geared but dual drive option
@@ -287,7 +287,7 @@ Board name: FYSETCV1_1A, FYSETCV1_1B, FYSETCV1_2A, FYSETCV1_2B, change_value = S
 
 //#define ADVANCED_PAUSE_FEATURE  //Activate this feature if you want to have Filament change and Pause enabled.
 //#define Nozzle_topright_park // Nozzle is Automatically parked on top left of bed by default during pause & filament change. Define this if you want the nozzle to be parked on the top right instead.
-#define Total_filament_path change_value// Please measure the entire distance fron the Extruder to the the tip of the nozzle as accurately as possible. Replace change_value with your measured value here in mm units. NOT ft/inch.
+//#define Total_filament_path change_value// Please measure the entire distance fron the Extruder to the the tip of the nozzle as accurately as possible. Replace change_value with your measured value here in mm units. NOT ft/inch.
 
 /*** *** *** Section 13B - Additional Sensors. E.g. Filament Sensors. This is where you activate and define your settings *** *** ***/
 //#define FILAMENT_RUNOUT_SENSOR // Define this if you have a filament sensor. Please ensure it is connected to your mainboard and NOT your TFT
@@ -296,7 +296,7 @@ Board name: FYSETCV1_1A, FYSETCV1_1B, FYSETCV1_2A, FYSETCV1_2B, change_value = S
 
 /*** *** *** Section 14 - Advanced Printer Settings. Change them or you can leave them as default *** *** ***/
 
-#define INVERT_XYZ // Define this function only if your XYZ is going in the wrong direction!!! This inverts all 3 axis(s) together. Does not work with Custom_Printer. Change settigns in that section!
+//#define INVERT_XYZ // Define this function only if your XYZ is going in the wrong direction!!! This inverts all 3 axis(s) together. Does not work with Custom_Printer. Change settigns in that section!
 #define INVERT_E0_DIR true // This is for your Extruder's direction. Change value to false if you need your extruder motor to rotate the other way
 #define THERMAL_PROTECTION_LEVEL 2 // Acceptable values are 1 (default), 2 and 3. If you have false positives, choose 1. If you want more aggressive thermal runaway settings, choose 3.
 #define DEFAULT_ACCELERATION          500    // X, Y, Z and E acceleration for printing moves. Change if you like
@@ -2692,5 +2692,5 @@ Board name: FYSETCV1_1A, FYSETCV1_1B, FYSETCV1_2A, FYSETCV1_2B, change_value = S
 /*****************************************************************************/
 //#define Auto_fan_E1 // Activate this function only for SKR 1.3, 1.4, 1.4 Turbo Boards. Mechanical wiring changes IS REQUIRED! Proceed with caution
 //#define SDCARD_BOARD_FIX // Forces SD card to work on mainboard. Some boards do not need this fix.
-//#define SDCARD_LCD_FIX // Forces SD card to work on external LCD/ TFT. Some screens do not need this fix.
+#define SDCARD_LCD_FIX // Forces SD card to work on external LCD/ TFT. Some screens do not need this fix.
 //#define Ender_5fix // If you have a newer ender 5, you need to enable this fix to adjust your Z steps
