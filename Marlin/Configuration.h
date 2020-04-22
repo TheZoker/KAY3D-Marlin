@@ -75,7 +75,7 @@
 //#define BTTSKR1_4 // [BETA] Choose this if you are using BigTreeTech SKR 1.4
 //#define BTTSKRV1_4TURBO //Choose this if you are using BigTreeTech SKR 1.4 Turbo
 //#define BTTSKRE3DIPV1_0 // Choose this if you are using BigTreeTech SKR E3 DIP v1.0
-//#define BTTSKRE3DIPV1_1 // [BETA] Choose this if you are using BigTreeTech SKR E3 DIP v1.1
+#define BTTSKRE3DIPV1_1 // [BETA] Choose this if you are using BigTreeTech SKR E3 DIP v1.1
 //#define BTTSKRPROV1_1 //Choose this if you are using BigTreeTech SKR PRO v1.1
 //#define BTTSKRNPRO1_1 //Choose this if you are using BigTreeTech SKR Non-PRO v1.1
 //#define MKSGENLV1_0 //[BETA] Choose this if you are using MKS Gen L v1.0 
@@ -105,7 +105,7 @@ Board name: FYSETCV1_1A, FYSETCV1_1B, FYSETCV1_2A, FYSETCV1_2B, change_value = S
 
 /*Information: Please look for LCD GRAPHICS EXPLANATION for a full reference available on Marlin if required*/ 
 
-//#define CR10_STOCKDISPLAY // Choose this if you are using stock LCD display for Ender 3, 5 or BTT TFT touch screens. 
+#define CR10_STOCKDISPLAY // Choose this if you are using stock LCD display for Ender 3, 5 or BTT TFT touch screens. 
 //#define REPRAP_DISCOUNT_FULL_GRAPHIC_SMART_CONTROLLER // Choose this if your board allows for it. SKR mini e3 v1.2 Do NOT enable this. 
 
 #if ENABLED(kay3d_debuggingmode) //For Debugging purposes only. Please ignore this line of code
@@ -117,10 +117,10 @@ Board name: FYSETCV1_1A, FYSETCV1_1B, FYSETCV1_2A, FYSETCV1_2B, change_value = S
 
 /*** *** *** Section 2 - Choose your driver types here. You can also add additional drivers per axis if you like*** *** ***/
 
-#define x_driver_type change_value  //For the X driver. See below for your driver type and replace change_value with it.
-#define y_driver_type change_value  //For the Y driver. See below for your driver type and replace change_value with it.
-#define z_driver_type change_value  //For the Z driver. See below for your driver type and replace change_value with it.
-#define e_driver_type change_value  //For the E driver. See below for your driver type and replace change_value with it.
+#define x_driver_type TMC2209  //For the X driver. See below for your driver type and replace change_value with it.
+#define y_driver_type TMC2209  //For the Y driver. See below for your driver type and replace change_value with it.
+#define z_driver_type TMC2209  //For the Z driver. See below for your driver type and replace change_value with it.
+#define e_driver_type TMC2209  //For the E driver. See below for your driver type and replace change_value with it.
 #endif
 /* Drivers like TMC5130 that require SPI pins are not natively supported in Cheetah 5.0 firmware at the moment
 * Acceptable driver values: A4988, A5984, DRV8825, LV8729, L6470, L6474, POWERSTEP01, TB6560, TB6600, TMC2100, TMC2130, TMC2130_STANDALONE,
@@ -131,7 +131,7 @@ Board name: FYSETCV1_1A, FYSETCV1_1B, FYSETCV1_2A, FYSETCV1_2B, change_value = S
 /*** *** *** Section 3 - Choose your printer name by uncommenting it. There should only be one active selection here.*** *** ***/
 
 //#define KAY3D_CoreXY // Choose this only if you have the KAY3D CoreXY based on the Ender 3. There are available .bin files also in the firmware section. 
-//#define Ender_3 // Choose this if you have the Ender 3 or Ender 3-Pro
+#define Ender_3 // Choose this if you have the Ender 3 or Ender 3-Pro
 //#define Ender_5 // Choose this if you have the Ender 5
 //#define Ender_5_2 // Choose this configuration ONLY if the first ender 5 configuration doesn't work
 //#define Ender_5plus // Chose this is you have the Ender 5-Plus. You need to have TFT lcd control. Cheetah 5.0 does not work with stock touchscreen.
@@ -189,7 +189,7 @@ Board name: FYSETCV1_1A, FYSETCV1_1B, FYSETCV1_2A, FYSETCV1_2B, change_value = S
 
 /*** *** **** Section 6 - Choose your Extruder type. There should only be one active selection here *** *** ***/
 
-//#define Ender_regular // e-steps: 93. Plastic extruder used stock Ender-3/Pro and CR-10 
+#define Ender_regular // e-steps: 93. Plastic extruder used stock Ender-3/Pro and CR-10 
 //#define Ender_regular_metal // e-steps: 97.3.  Metal extruder used stock Ender-3/Pro and CR-10 
 //#define Ender_metaldualdrive // e-steps: 140. Usually red in color with TWO toothed gears
 //#define E3D_hemera_extruder // e-steps: 409. If over extruder please change e steps via GCODE M92XXX where XXX = number of correct steps
@@ -207,7 +207,7 @@ Board name: FYSETCV1_1A, FYSETCV1_1B, FYSETCV1_2A, FYSETCV1_2B, change_value = S
 
 /*** *** *** Section 7 - Choose the hotend that you are using. There should only be one active selection here *** *** ***/ 
 
-//#define Creality_mk8 // Choose this hotend if you are using the stock hotend from Creality's Ender 3/ cr-10/ microswiss but using Creality's thermistor
+#define Creality_mk8 // Choose this hotend if you are using the stock hotend from Creality's Ender 3/ cr-10/ microswiss but using Creality's thermistor
 //#define Sidewinder_x1hotend //Choose this hotend if you have the stock hotend from Artillery's Sidewinder X1
 //#define E3D_v6 // Choose this hotend if you are using E3D's V6 hotend
 //#define E3D_volcano // Choose this hotend if you are using E3D's volcano hotend
@@ -222,7 +222,7 @@ Board name: FYSETCV1_1A, FYSETCV1_1B, FYSETCV1_2A, FYSETCV1_2B, change_value = S
 
 /*** *** *** Section 8 - Choose the heated bed that you are using. There should only be one active selection here*** *** ***/ 
 
-//#define Creality_e3 // Choose this heated bed if you are using the stock heated bed from Creality's 
+#define Creality_e3 // Choose this heated bed if you are using the stock heated bed from Creality's 
 //#define Sidewinder_x1bed // Choose this heated bed if you are using the stock heated bed from Artillery Sidewinder X1's
 //#define Custom_heatedbed // Choose this heated bed if you have a non specified heated bed or an AC heated bed
 
@@ -296,7 +296,7 @@ Board name: FYSETCV1_1A, FYSETCV1_1B, FYSETCV1_2A, FYSETCV1_2B, change_value = S
 
 /*** *** *** Section 14 - Advanced Printer Settings. Change them or you can leave them as default *** *** ***/
 
-//#define INVERT_XYZ // Define this function only if your XYZ is going in the wrong direction!!! This inverts all 3 axis(s) together. Does not work with Custom_Printer. Change settigns in that section!
+#define INVERT_XYZ // Define this function only if your XYZ is going in the wrong direction!!! This inverts all 3 axis(s) together. Does not work with Custom_Printer. Change settigns in that section!
 #define INVERT_E0_DIR true // This is for your Extruder's direction. Change value to false if you need your extruder motor to rotate the other way
 #define THERMAL_PROTECTION_LEVEL 2 // Acceptable values are 1 (default), 2 and 3. If you have false positives, choose 1. If you want more aggressive thermal runaway settings, choose 3.
 #define DEFAULT_ACCELERATION          500    // X, Y, Z and E acceleration for printing moves. Change if you like
