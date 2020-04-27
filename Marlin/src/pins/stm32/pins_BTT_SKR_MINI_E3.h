@@ -47,7 +47,7 @@
 //
 #define X_STOP_PIN         PC0
 #define Y_STOP_PIN         PC1
-#define Z_STOP_PIN         PC2
+#define Z_STOP_PIN         PC14
 
 //
 // Z Probe must be this pins
